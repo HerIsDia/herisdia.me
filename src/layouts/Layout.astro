@@ -11,6 +11,7 @@ const {frontmatter} = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
+		<link rel="manifest" href="/manifest.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://use.typekit.net/mvc1mah.css" />
 		<meta name="generator" content={Astro.generator} />
@@ -39,6 +40,13 @@ const {frontmatter} = Astro.props;
 			</div>
 		</div>
 	</body>
+	<script>
+    if('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+      })
+    }
+  </script>
 </html>
 
 <style is:global>
