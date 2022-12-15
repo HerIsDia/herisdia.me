@@ -1,0 +1,69 @@
+---
+layout: '../../layouts/Layout.astro'
+title: '🌈 Bienvenue sur mon site.'
+---
+
+import { logoRandom } from '../../data/scripts/imagesRandom';
+import Title from '../../components/Title.svelte';
+import Quotes from '../../components/Quotes.svelte';
+import List from '../../components/List.svelte';
+import Links from '../../components/Links.svelte';
+import Link from '../../components/Link.svelte';
+
+<Title
+  title="Hello, I'm diamant. 👋"
+  subtitle='She/Her.'
+  imageAlt='logo'
+  image={logoRandom()}
+/>
+<Quotes client:only lang='fr' />
+
+- 📂 Typescript developper.
+- 🪶 I'm writing things sometimes.
+- 🖌️ Beginner artist. (digital only.)
+- 💾 Do french videos.
+
+<br />
+
+- 💚 Pokemon & Sims lover.
+- 👑 Furry princess.
+- 🌈 Love rainbows.
+
+<br />
+
+<Links>
+  <Link
+    color='#f87171'
+    text='Youtube'
+    href='https://www.youtube.com/channel/UCcF4Rn8Gbzc_Z_8hIeeV7dg'
+    target={true}
+  />
+  <Link
+    color='#facc15'
+    text='Github'
+    href='https://github.com/herisdia'
+    target={true}
+  />
+  <Link
+    color='#4ade80'
+    text='DeviantArt'
+    href='https://deviantart.com/hereisdia'
+    target={true}
+  />
+  <Link
+    color='#749ded'
+    text='Tumblr'
+    href='https://www.heris.fun/'
+    target={true}
+  />
+</Links>
+
+<Links>
+  <Link
+    color='#d4d4d4'
+    text='Code source'
+    href='https://github.com/herisdia/herisdia.me'
+    target={true}
+  />
+  <Link color='#d4d4d4' text='Crédits des arts' href='./credits' />
+</Links>

@@ -1,35 +1,75 @@
 ---
-export interface Props {
-	title: string;
-}
+import TextboxEA from '../components/layout/TextboxEA.svelte';
+import Background from '../components/layout/Background.svelte';
+import { backgroundRandom } from '../data/scripts/imagesRandom';
 
-const { title } = Astro.props;
+const {frontmatter} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/mvc1mah.css" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{frontmatter.title}</title>
+		<meta
+      name="description"
+      content="The official (tiny) website of Diamant."
+    />
+    <meta name="keywords" content="diamant.dev,diamantdev,herisdia,diamant" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
 	</head>
-	<body>
-		<slot />
+	<body class="bg-[#0f0f0f] overflow-hidden">
+		<TextboxEA client:only />
+		<div id="container" class="h-screen w-full flex items-center justify-center">
+  		<div id="content" class="w-full lg:w-6/7">
+				<div class="lg:grid items-center lg:grid-flow-row lg:grid-cols-2 lg:grid-rows-1">
+    			<div id="box" class="text-white overflow-y-auto overflow-x-hidden grid items-center h-screen pt-16 pb-16 pl-4 pr-4 ">
+  					<div id="boxcontent" class="block-inline font-mundial w-full text-[#ece0f3]">
+    					<slot />
+  					</div>
+					</div>
+					<Background src={backgroundRandom()} client:load />
+  			</div>
+			</div>
+		</div>
 	</body>
 </html>
+
 <style is:global>
 	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--primary: #b69bc9;
+		--secondary: #e2ceef;
+		--selection: #ca9eec69;
+		--selection-text: #fff;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+
+	::selection {
+		background: var(--selection);
+		color: var(--selection-text);
 	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+
+	@tailwind base;
+	@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+  p, ul {
+    @apply text-base mt-1 mb-1;
+  }
+
+	@tailwind components;
+	@tailwind utilities;
+}
 </style>

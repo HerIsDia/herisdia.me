@@ -1,0 +1,26 @@
+---
+layout: '../../layouts/Layout.astro'
+title: 'Crédits des artistes'
+---
+
+import Links from '../../components/Links.svelte';
+import Link from '../../components/Link.svelte';
+import { Content as Credits } from '../../data/credits.md';
+
+# Crédits des artistes.
+
+Ceci est une page listant les artistes auquel leurs arts ont été utilisés sur ce site.
+
+**Tout arts dans le dossier [`./public/backgrounds`](https://github.com/herisdia/herisdia.me/tree/master/public/backgrounds/) sont générés par une IA.**
+
+<br />
+
+> Les arts sont dans ce dossier: [`./public/logos`](https://github.com/herisdia/herisdia.me/tree/master/public/logos/).
+
+<br />
+
+<Credits />
+
+<Links>
+  <Link color='#b69bc9' text='Retour' href='./' target={true} />
+</Links>
