@@ -1,3 +1,10 @@
+## Diamant. (Myself)
+
+- 🖼️ 36. <br/>
+- 🖌️ I mean, you're already on my website, so...
+
+<br />
+
 ## Puurply
 
 - 🖼️ 0, 1, 6, 7, 8, 15, 16, 19, 22, 28, 30, 33. <br/>
@@ -99,7 +106,14 @@
 ## Y PLEUT.
 
 - 🖼️ 23,32, 34. <br/>
-- 🖌️ It's just Nanko & Kitsu.
+- 🖌️ It's just Nanako & Kitsu.
+
+<br />
+
+## Kitsu & Diamant.
+
+- 🖼️ 37. <br/>
+- 🖌️ It's just Kitsu & Myself.
 
 <br />
 
