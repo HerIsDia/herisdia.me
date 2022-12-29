@@ -1,13 +1,13 @@
 ## Diamant. (Myself)
 
-- 🖼️ 36. <br/>
-- 🖌️ I mean, you're already on my website, so...
+- 🖼️ 36, 38, 39. <br/>
+- 🖌️ [Artfol](https://www.artfol.me/diamant)
 
 <br />
 
 ## Puurply
 
-- 🖼️ 0, 1, 6, 7, 8, 15, 16, 19, 22, 28, 30, 33. <br/>
+- 🖼️ 0, 1, 6, 7, 8, 15, 16, 19, 22, 28, 30, 33, 40. <br/>
 - 🖌️ [DeviantArt](https://www.deviantart.com/puurply)
 
 <br />
