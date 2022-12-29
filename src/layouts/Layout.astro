@@ -18,7 +18,7 @@ const {frontmatter} = Astro.props;
 		<title>{frontmatter.title}</title>
 		<meta
       name="description"
-      content="The official (tiny) website of Diamant."
+      content={frontmatter.description ? frontmatter.description : "The official (tiny) website of Diamant."}
     />
     <meta name="keywords" content="diamant.dev,diamantdev,herisdia,diamant" />
     <meta name="robots" content="index, follow" />
@@ -41,11 +41,24 @@ const {frontmatter} = Astro.props;
 		</div>
 	</body>
 	<script>
-    if('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
+		if('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('/sw.js')
       })
     }
+		
+		import { registerSW } from 'virtual:pwa-register';
+		registerSW({
+			onRegistered(swr) {
+				console.log(`SW registered: ${swr}`);
+			},
+			onRegisterError(error) {
+				console.log('SW registration error', error);
+			},
+			onNeedRefresh() {
+				window.location.reload();
+			},
+		});
   </script>
 </html>
 
