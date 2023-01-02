@@ -2,6 +2,7 @@
 import TextboxEA from '../components/layout/TextboxEA.svelte';
 import Background from '../components/layout/Background.svelte';
 import { backgroundRandom } from '../data/scripts/imagesRandom';
+import PinkyMouse from '../components/eastereggs/PinkyMouse.svelte';
 
 const {frontmatter} = Astro.props;
 ---
@@ -27,6 +28,7 @@ const {frontmatter} = Astro.props;
 	</head>
 	<body class="bg-[#0f0f0f] overflow-hidden">
 		<TextboxEA client:only />
+		<PinkyMouse client:only />
 		<div id="container" class="h-screen w-full flex items-center justify-center">
   		<div id="content" class="w-full lg:w-6/7">
 				<div class="lg:grid items-center lg:grid-flow-row lg:grid-cols-2 lg:grid-rows-1">
@@ -35,7 +37,7 @@ const {frontmatter} = Astro.props;
     					<slot />
   					</div>
 					</div>
-					<Background src={backgroundRandom()} client:load />
+					<Background src={frontmatter.bgSrc ? frontmatter.bgSrc : backgroundRandom()} client:load />
   			</div>
 			</div>
 		</div>

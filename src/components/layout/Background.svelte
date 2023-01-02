@@ -24,7 +24,6 @@
     const sqrtColor = await fac.getColor(backgroundImage, {
       algorithm: 'sqrt',
     });
-    console.log(simpleColor, dominantColor, sqrtColor);
     if (simpleColor.isLight) {
       document.documentElement.style.setProperty(
         '--secondary',
@@ -54,6 +53,6 @@
     bind:this={backgroundImage}
     {src}
     {alt}
-    class="object-cover min-h-screen w-100%"
+    class="object-cover min-h-screen w-full"
   />
 </div>
