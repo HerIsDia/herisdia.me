@@ -6,6 +6,6 @@ title: 'Redirecting...'
 <script is:inline>
 	const language = window.navigator.language;
   const lang = language.substring(0, 2);
-	window.location.pathname = `/${lang}/`;
+	window.location.pathname = lang == 'fr' ? '/fr/' : '/en/';
 </script>
 
