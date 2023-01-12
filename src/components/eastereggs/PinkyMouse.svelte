@@ -1,7 +1,11 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-
-  const isEnable = localStorage.getItem('pinkyMouse') === 'true';
+  const pinkyMouseLocalStorage = localStorage.getItem('pinkyMouse');
+  const pinkyMouseDate = pinkyMouseLocalStorage
+    ? parseInt(pinkyMouseLocalStorage)
+    : 0;
+  const isEnable =
+    pinkyMouseDate + 1000 * 60 * 60 * 24 * 7 > new Date().getTime();
   let img: HTMLImageElement;
 
   onMount(() => {
@@ -19,7 +23,7 @@
     }
     const getUrl = window.location.pathname;
     if (getUrl.startsWith('/pinky')) {
-      localStorage.setItem('pinkyMouse', 'true');
+      localStorage.setItem('pinkyMouse', `${new Date().getTime()}`);
     }
   });
 </script>

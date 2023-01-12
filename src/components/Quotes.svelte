@@ -45,7 +45,7 @@
 <div
   id="quotes"
   class="mb-8 ml-1 w-fit text-white flex justify-center items-center pl-2 border-l-4 border-solid"
-  style="border-color: var(--secondary); transition: border-color 0.69s ease-in-out;"
+  style="border-color: var(--secondary);"
 >
   <p
     bind:this={quoteP}

@@ -14,7 +14,7 @@ const {frontmatter} = Astro.props;
     <link rel="icon" href="/favicon.ico" />
 		<link rel="manifest" href="/manifest.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://use.typekit.net/mvc1mah.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;500;600;700&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{frontmatter.title}</title>
 		<meta
@@ -29,10 +29,10 @@ const {frontmatter} = Astro.props;
 	<body class="bg-[#0f0f0f] overflow-hidden">
 		<TextboxEA client:only />
 		<PinkyMouse client:only />
-		<div id="container" class="h-screen w-full flex items-center justify-center">
-  		<div id="content" class="w-full lg:w-6/7">
+		<div id="container" class="h-screen w-full flex items-center justify-center opacity-[var(--ready)]" style="transition: opacity 0.69s ease-in-out;">
+  		<div id="content" class="w-full lg:w-6/7 font-Outfit">
 				<div class="lg:grid items-center lg:grid-flow-row lg:grid-cols-2 lg:grid-rows-1">
-    			<div id="box" class="text-white overflow-y-auto overflow-x-hidden grid items-center h-screen pt-16 pb-16 pl-4 pr-4 ">
+    			<div id="box" class=" box text-white overflow-y-auto overflow-x-hidden grid items-center h-screen pt-16 pb-16 pl-4 pr-4 bg-[var(--bgshade)]" style="transition: background 0.69 ease-in-out;">
   					<div id="boxcontent" class="block-inline font-mundial w-full text-[#ece0f3]">
     					<slot />
   					</div>
@@ -67,14 +67,29 @@ const {frontmatter} = Astro.props;
 <style is:global>
 	:root {
 		--primary: #b69bc9;
-		--secondary: #e2ceef;
+		--secondary: #e2ceef00;
+		--bgshade: #0f0f0f;
 		--selection: #ca9eec69;
-		--selection-text: #fff;
+		--selection-btn: #0f0f0f;
+		--ready: 0;
+
+		--bg: 69px;
+		--box: -69px;
 	}
 
 	::selection {
 		background: var(--selection);
-		color: var(--selection-text);
+		color: white;
+	}
+
+	.bg {
+    transform: translateX(var(--bg));
+		transition: all 0.69s ease-out;
+  }
+
+	.box {
+		transform: translateX(var(--box));
+		transition: all 0.69s ease-out;
 	}
 
 	@tailwind base;
