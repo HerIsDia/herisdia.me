@@ -5,13 +5,18 @@
   export let lang: 'fr' | 'en' | 'espo' = 'en';
   let quoteP: HTMLParagraphElement;
   let oldQuote: string = '';
+  const isNsfwAllowed = localStorage.getItem('nsfw') === 'yes';
 
   const generateQuote = () => {
-    const quotesInLanguage = quotes[lang];
+    const quotesInLanguage: { quote: string; isNsfw: boolean }[] = quotes[lang];
+    if (!isNsfwAllowed) {
+      quotesInLanguage.filter((quote) => !quote.isNsfw);
+    }
     let randomQuote = '';
     while (randomQuote === oldQuote) {
       randomQuote =
-        quotesInLanguage[Math.floor(Math.random() * quotesInLanguage.length)];
+        quotesInLanguage[Math.floor(Math.random() * quotesInLanguage.length)]
+          .quote;
     }
     return randomQuote;
   };

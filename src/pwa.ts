@@ -1,5 +1,6 @@
 import { registerSW } from 'virtual:pwa-register';
 registerSW({
+  immediate: true,
   onRegistered(swr) {
     console.log(`SW registered: ${swr}`);
   },

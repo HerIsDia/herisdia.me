@@ -35,14 +35,26 @@ console.log('🅰️ Generate quotes.');
 const filefr = readFileSync('./src/data/quotes/fr.txt');
 const fileen = readFileSync('./src/data/quotes/en.txt');
 const fileglobal = readFileSync('./src/data/quotes/global.txt');
+
 let quotesfr = filefr.toString().split('\n');
 let quotesen = fileen.toString().split('\n');
-const quotesglobal = fileglobal.toString().split('\n');
+let quotesglobal = fileglobal.toString().split('\n');
+quotesfr = quotesfr.map((quote) => {
+  return { quote: quote.replace('🔞', ''), isNsfw: quote.startsWith('🔞') };
+});
+quotesen = quotesen.map((quote) => {
+  return { quote: quote.replace('🔞', ''), isNsfw: quote.startsWith('🔞') };
+});
+quotesglobal = quotesglobal.map((quote) => {
+  return { quote: quote.replace('🔞', ''), isNsfw: quote.startsWith('🔞') };
+});
 quotesfr = [...quotesfr, ...quotesglobal];
 quotesen = [...quotesen, ...quotesglobal];
-const espoQuotes = [];
-quotesfr.forEach((quote) => {
-  espoQuotes.push(espo(quote));
+const espoQuotes = quotesfr.map((quote) => {
+  return {
+    quote: espo(quote.quote.replace('🔞', '')),
+    isNsfw: quote.quote.startsWith('🔞'),
+  };
 });
 const newQuotes = { fr: quotesfr, en: quotesen, espo: espoQuotes };
 console.log(`📝 Writing quotes to file.`);

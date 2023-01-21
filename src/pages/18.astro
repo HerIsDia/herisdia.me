@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+
+<h1>Do you have 18+ years ?</h1>
+<br />
+<ul>
+  <li><a id="yes" href="#">Yes</a></li>
+  <li><a id="no" href="/pinky">No</a></li>
+</ul>
+
+</Layout>
+
+<script>
+  const yes = document.getElementById('yes');
+  const no = document.getElementById('no');
+
+  if (yes)
+  yes.addEventListener('click', () => {
+    localStorage.setItem('nsfw', 'yes');
+    window.location.href = '/';
+  });
+
+  if (no)
+  no.addEventListener('click', () => {
+    localStorage.setItem('nsfw', 'no');
+  });
+</script>
