@@ -44,7 +44,9 @@ export default defineConfig({
         ],
       },
       workbox: {
+        navigateFallback: '/404',
         sourcemap: true,
+        globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,gif,json}'],
       },
     }),
   ],
