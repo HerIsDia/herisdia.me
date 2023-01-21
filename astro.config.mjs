@@ -16,6 +16,7 @@ export default defineConfig({
     svelte(),
     mdx(),
     AstroPWA({
+      sourcemap: true,
       registerType: 'autoUpdate',
       includeAssets: [
         'favicon.ico',
@@ -26,6 +27,9 @@ export default defineConfig({
         'backgrounds/*.png',
       ],
       manifest: {
+        mode: 'development',
+        base: '/',
+        scope: '/',
         name: "Her is dia's website",
         short_name: 'HerIsDia.me',
         description: 'Website of HerIsDia.',
@@ -46,7 +50,11 @@ export default defineConfig({
       workbox: {
         navigateFallback: '/404',
         sourcemap: true,
-        globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,gif,json}'],
+        globPatterns: ['**/*'],
+      },
+      devOptions: {
+        enabled: true,
+        navigateFallback: '/404',
       },
     }),
   ],
