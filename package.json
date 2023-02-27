@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "node ./scripts/prebuild.js && astro dev",
+    "dev": "node ./scripts/prebuild.js && astro dev --host",
     "start": "astro dev",
     "build": "node ./scripts/prebuild.js && astro build",
     "preview": "astro preview",

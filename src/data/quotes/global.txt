@@ -13,3 +13,4 @@ Uno !
 This is the monado's power.
 RIKI RIKI !
 Perle = cute !
+...
