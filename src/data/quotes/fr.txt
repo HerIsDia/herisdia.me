@@ -29,7 +29,7 @@ Le saviez-vous: Une version beta du site est disponible sur beta.herisdia.me. Ap
 J'écoute l'OST des Sims pendant que j'écris ces phrases.
 La façon dont les quotes sont généré pour l'espagnolo, c'est qu'il prend les phrases en français mais auquel un script est executée à chaque build du site pour générer le texte.
 Turbo crétine.
-Je ne suis pas une perverse.
+🔞Je ne suis pas une perverse.
 Version du site: v4.2.1.4.1.3.
 Gabriel est inaturel.
 N'oubliez pas de refaire vos cartes d'identitées si elles ne sont plus valables.
@@ -41,7 +41,7 @@ On en parles pas assez, mais les Sims, c'est trop bien.
 Ce site est sponsorisée par NordVPN, profitez d'une réduction de 69 centimes en utilisant le code: POINT.
 Ce site n'est pas sponsorisée par NordVPN.
 Est ce que vous saviez que le 69, bah c'est deux chiffres formant un nombre.
-Bite.
+🔞Bite.
 Pourquoi vous êtes ici ? Jouez aux Sims bordel.
 Une carte google play de 50€ est caché dans ce site.
 Norah, Aki, Clara & Kiara. 💜
@@ -64,7 +64,7 @@ Y a 5 phrases dans cette panoplie de phrases auquel c'est les mêmes mais ça ch
 Moi je dis...
 Êtes-vous hippopotomonstrosesquippedaliophobique ?
 Il est 18h, vous écoutez RTL... TUTUTUTUTUUUUUUUUUU TATATATATAAAAAAAAAAAAAAAAAAAAAA. 
-MAIS MOI J'VEUX FAIRE L'AMOUR.
+🔞MAIS MOI J'VEUX FAIRE L'AMOUR.
 Il a cru que j'étais intelligent.
 Ceci est la 69ème phrase inscrite dans le fichier des phrases random.
 Dommage, à 1 près c'était la 69ème phrase.
@@ -76,9 +76,9 @@ Le saviez-vous, la 69ème phrase est la 69ème ligne de texte, sa vous le savez,
 Je suis la développeuse élite n°1 alpha de ce site web.
 Je suis la seule développeuse du site.
 Rompich.
-LE CUL.
-Voici une phrase philosophique: "Le cul c'est la vie".
-Si vous avez lu.e une phrase philosophique parlant de cul dans ce site, c'est tout simplement une IA qui a généré cette phrase. (Wallah je vous jure que c'est vrai.)
+🔞LE CUL.
+🔞Voici une phrase philosophique: "Le cul c'est la vie".
+🔞Si vous avez lu.e une phrase philosophique parlant de cul dans ce site, c'est tout simplement une IA qui a généré cette phrase. (Wallah je vous jure que c'est vrai.)
 Ce site est un flop.
 Vous savez que développer des sites dites "PWA", c'est écologique, car le contenue du site se sauvegarde sur votre machine et cela limite donc les transmitions de données.
 Si vous avez lu cette phrase, c'est que vous avez lu la phrase précédente.
@@ -120,10 +120,10 @@ Je suis un chat. Miaou.
 Vous savez que j'écris tout le temps dangereux "dangeureux" ? On peux dire que tout ça est très dangeureux.
 Faites gaffe, je one shot tout les boss.
 Je ship sur shulk, et alors ? 😳
-C'est la 123ème ligne de texte. Donc la je dois insérer un truc pour dire olala regardez 123Lunatic car j'adore tellement son contenu. Mais en fait, je vais pas le faire, car je suis pas un gros con.
+🔞C'est la 123ème ligne de texte. Donc la je dois insérer un truc pour dire olala regardez 123Lunatic car j'adore tellement son contenu. Mais en fait, je vais pas le faire, car je suis pas un gros con.
 Riki le meilleur en fait.
-C'EST MOI OU L'IA VIENS DE ME TRAITER DE GROS CON.
-EN PLUS C'EST CONNE, FOUTU IA.
+🔞C'EST MOI OU L'IA VIENS DE ME TRAITER DE GROS CON.
+🔞EN PLUS C'EST CONNE, FOUTU IA.
 Je décède de rire.
 Achetez les Sims.
 En gros comme devins, tu ne sert pas à grand chose.
@@ -139,3 +139,4 @@ C'est une fille qui joue au jeux vidéo: c'est un garçon manqué quoi.
 o, c'est un rond.
 Je me suis faite hackée.
 J'attend toujours que le hackeur leak la vidéo, j'ai pas de nouvelle.
+Prout.

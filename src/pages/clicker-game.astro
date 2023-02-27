@@ -1,0 +1,233 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div id="game-title">Perle est cute</div>
+<div id="score">0</div>
+<div id="game-container">
+  <div id="clicker-button" class="center-button">
+    <p>Cliquez pour gagner des points!</p>
+  </div>
+</div>
+<div id="shop">
+  <h2>Boutique</h2>
+  <div id="multiplier-item">
+    <p>Multiplicateur de score</p>
+    <button id="multiplier-button">Acheter</button>
+    <span id="multiplier-price">Prix : 100 points</span>
+    <span id="multiplier-level">Niveau : 1</span>
+  </div>
+</div>
+
+<button id="explosion-button">Cliquez pour l'explosion</button>
+<div id="explosion" class="explosion"></div>
+
+</Layout>
+
+<style>
+  body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#score {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#game-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#clicker-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#clicker-button:hover {
+  background-color: #3e8e41;
+}
+
+#shop {
+  margin-top: 20px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+#multiplier-item {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#multiplier-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#multiplier-button:hover {
+background-color: #3e8e41;
+}
+
+#multiplier-price, #multiplier-level {
+margin-left: 10px;
+font-size: 14px;
+}
+
+#clicker-button {
+  animation: button-pulse 1s infinite;
+}
+
+@keyframes button-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#multiplier-button {
+  animation: button-fade-in 1s;
+}
+
+@keyframes button-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#game-title {
+  animation: title-animation 5s ease-in-out;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 100px;
+}
+
+@keyframes title-animation {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg) skew(30deg);
+  }
+}
+
+#explosion {
+  animation: explosion 1s infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #ff0000;
+}
+
+@keyframes explosion {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  25% {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+  }
+  50% {
+    width: 400px;
+    height: 400px;
+    opacity: 0.5;
+  }
+  75% {
+    width: 600px;
+    height: 600px;
+    opacity: 0.2;
+  }
+  100% {
+    width: 800px;
+    height: 800px;
+    opacity: 0;
+  }
+}
+
+
+</style>
+
+<script>
+  let score = 0;
+let multiplier = 1;
+let multiplierPrice = 100;
+let multiplierLevel = 1;
+
+let clickerButton = document.getElementById("clicker-button") as HTMLButtonElement;
+let scoreText = document.getElementById("score") as HTMLDivElement;
+let multiplierButton = document.getElementById("multiplier-button") as HTMLButtonElement;
+let multiplierPriceText = document.getElementById("multiplier-price") as HTMLSpanElement;
+
+clickerButton
+  .addEventListener("click", function () {
+    score += multiplier;
+    scoreText.innerHTML = score.toString();
+  });
+
+  multiplierButton
+  .addEventListener("click", function () {
+    if (score >= multiplierPrice) {
+      score -= multiplierPrice;
+      multiplier++;
+      multiplierPrice *= 2;
+      multiplierLevel++;
+      multiplierPriceText.innerHTML =
+        "Prix : " + multiplierPrice + " points";
+        multiplierPriceText.innerHTML =
+        "Niveau : " + multiplierLevel;
+      scoreText.innerHTML = score.toString();
+    }
+  });
+
+var explosionButton = document.getElementById("explosion-button") as HTMLButtonElement;
+var explosion = document.getElementById("explosion") as HTMLDivElement;
+
+explosionButton.addEventListener("click", function() {
+  explosion.classList.add("explosion");
+});
+
+</script>

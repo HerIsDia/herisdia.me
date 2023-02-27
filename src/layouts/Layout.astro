@@ -3,6 +3,7 @@ import TextboxEA from '../components/layout/TextboxEA.svelte';
 import Background from '../components/layout/Background.svelte';
 import { backgroundRandom } from '../data/scripts/imagesRandom';
 import PinkyMouse from '../components/eastereggs/PinkyMouse.svelte';
+import { pwaInfo } from 'virtual:pwa-info';
 
 const {frontmatter} = Astro.props;
 ---
@@ -16,10 +17,10 @@ const {frontmatter} = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;500;600;700&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
-		<title>{frontmatter.title}</title>
+		<title>{frontmatter && frontmatter.title ? frontmatter.title : "Diamant's website"}</title>
 		<meta
       name="description"
-      content={frontmatter.description ? frontmatter.description : "The official (tiny) website of Diamant."}
+      content={frontmatter && frontmatter.description ? frontmatter.description : "The official (tiny) website of Diamant."}
     />
     <meta name="keywords" content="diamant.dev,diamantdev,herisdia,diamant" />
     <meta name="robots" content="index, follow" />
@@ -33,35 +34,17 @@ const {frontmatter} = Astro.props;
   		<div id="content" class="w-full lg:w-6/7 font-Outfit">
 				<div class="lg:grid items-center lg:grid-flow-row lg:grid-cols-2 lg:grid-rows-1">
     			<div id="box" class=" box text-white overflow-y-auto overflow-x-hidden grid items-center h-screen pt-16 pb-16 pl-4 pr-4 bg-[var(--bgshade)]" style="transition: background 0.69 ease-in-out;">
-  					<div id="boxcontent" class="block-inline font-mundial w-full text-[#ece0f3]">
+  					<div id="boxcontent" class="block-inline font-mundial w-full text-[#ece0f3] text-left">
     					<slot />
   					</div>
 					</div>
-					<Background src={frontmatter.bgSrc ? frontmatter.bgSrc : backgroundRandom()} client:load />
+					<Background src={frontmatter && frontmatter.bgSrc ? frontmatter.bgSrc : backgroundRandom()} client:load />
   			</div>
 			</div>
 		</div>
 	</body>
-	<script>
-		if('serviceWorker' in navigator) {
-			window.addEventListener('load', () => {
-				navigator.serviceWorker.register('/sw.js')
-      })
-    }
-		
-		import { registerSW } from 'virtual:pwa-register';
-		registerSW({
-			onRegistered(swr) {
-				console.log(`SW registered: ${swr}`);
-			},
-			onRegisterError(error) {
-				console.log('SW registration error', error);
-			},
-			onNeedRefresh() {
-				window.location.reload();
-			},
-		});
-  </script>
+	<script src="/src/pwa.ts"></script>
+	{ pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
 </html>
 
 <style is:global>

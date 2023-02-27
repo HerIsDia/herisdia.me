@@ -21,3 +21,6 @@ pnpm-debug.log*
 
 # generated datas
 src/data/*.json
+
+# Dev dist
+dev-dist/

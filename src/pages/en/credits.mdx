@@ -5,7 +5,7 @@ title: 'Credits of artists.'
 
 import Links from '../../components/Links.svelte';
 import Link from '../../components/Link.svelte';
-import { Content as Credits } from '../../data/credits.md';
+import Credits from '../../data/credits/Credits.svelte';
 
 # Credits of artists.
 
@@ -19,7 +19,7 @@ This is a document about crediting all the artists who have drawn arts for the m
 
 <br />
 
-<Credits />
+<Credits subtext='Find (x) on ' />
 
 <Links>
   <Link color='#b69bc9' text='Return' href='/en/' target={true} />
