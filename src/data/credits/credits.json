@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Diamant",
+    "numbers": [36, 38, 39],
+    "link": {
+      "name": "Artfol",
+      "url": "https://www.artfol.me/diamant"
+    }
+  },
+  {
+    "name": "Puurply",
+    "numbers": [0, 1, 6, 7, 8, 15, 16, 19, 22, 28, 30, 33, 40, 41],
+    "link": {
+      "name": "DeviantArt",
+      "url": "https://www.deviantart.com/puurply"
+    }
+  },
+  {
+    "name": "Raiuche",
+    "numbers": [2, 3],
+    "link": {
+      "name": "Twitter",
+      "url": "https://twitter.com/Raiuche"
+    }
+  },
+  {
+    "name": "Oféline",
+    "numbers": [5, 11, 27, 42]
+  },
+  {
+    "name": "Unitoxik",
+    "numbers": [4],
+    "link": {
+      "name": "DeviantArt",
+      "url": "https://www.deviantart.com/unitoxik"
+    }
+  },
+  {
+    "name": "Taiga Blackfield",
+    "numbers": [12, 18],
+    "link": {
+      "name": "DeviantArt",
+      "url": "https://www.deviantart.com/taiga-blackfield"
+    }
+  },
+  {
+    "name": "Linkann",
+    "numbers": [20, 26],
+    "link": {
+      "name": "Linktr.ee",
+      "url": "https://linktr.ee/linkann"
+    }
+  },
+  {
+    "name": "Sunee",
+    "numbers": [14],
+    "link": {
+      "name": "carrd.co",
+      "url": "ItsSunee.carrd.co"
+    }
+  },
+  {
+    "name": "Nuibea",
+    "numbers": [17],
+    "link": {
+      "name": "carrd.co",
+      "url": "https://nuibea.carrd.co/"
+    }
+  },
+  {
+    "name": "Gozillard",
+    "numbers": [10],
+    "link": {
+      "name": "carrd.co",
+      "url": "https://gozillard.carrd.co/"
+    }
+  },
+  {
+    "name": "NissaFY",
+    "numbers": [21],
+    "link": {
+      "name": "Twitter",
+      "url": "https://twitter.com/NissaFY_"
+    }
+  },
+  {
+    "name": "Changingmirror",
+    "numbers": [13]
+  },
+  {
+    "name": "Kitsu",
+    "numbers": [29, 43, 44],
+    "link": {
+      "name": "DeviantArt",
+      "url": "https://www.deviantart.com/kitsunemun"
+    }
+  },
+  {
+    "name": "Sashimi",
+    "numbers": [25, 31]
+  },
+  {
+    "name": "Nanako",
+    "numbers": [24]
+  },
+  {
+    "name": "Y PLEUT (Nanako & Kitsu)",
+    "numbers": [23, 32, 34, 45]
+  },
+  {
+    "name": "Kitsu & Diamant",
+    "numbers": [37]
+  },
+  {
+    "name": "Aki",
+    "numbers": [35],
+    "link": {
+      "name": "DeviantArt",
+      "url": "https://www.deviantart.com/huggyakizz"
+    }
+  }
+]

@@ -48,13 +48,11 @@ export default defineConfig({
         ],
       },
       workbox: {
-        navigateFallback: '/404',
         sourcemap: true,
         globPatterns: ['**/*'],
       },
       devOptions: {
         enabled: true,
-        navigateFallback: '/404',
       },
     }),
   ],

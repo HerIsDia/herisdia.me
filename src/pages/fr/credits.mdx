@@ -5,7 +5,7 @@ title: 'Crédits des artistes'
 
 import Links from '../../components/Links.svelte';
 import Link from '../../components/Link.svelte';
-import { Content as Credits } from '../../data/credits.md';
+import Credits from '../../data/credits/Credits.svelte';
 
 # Crédits des artistes.
 
@@ -19,7 +19,7 @@ Ceci est une page listant les artistes auquel leurs arts ont été utilisés sur
 
 <br />
 
-<Credits />
+<Credits subtext='Retrouvez (x) sur ' />
 
 <Links>
   <Link color='#b69bc9' text='Retour' href='/fr/' target={true} />
