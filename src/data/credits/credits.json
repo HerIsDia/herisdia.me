@@ -1,7 +1,7 @@
 [
   {
     "name": "Diamant",
-    "numbers": [36, 38, 39],
+    "numbers": [36, 38, 39, 47],
     "link": {
       "name": "Artfol",
       "url": "https://www.artfol.me/diamant"
@@ -9,7 +9,9 @@
   },
   {
     "name": "Puurply",
-    "numbers": [0, 1, 6, 7, 8, 15, 16, 19, 22, 28, 30, 33, 40, 41, 46],
+    "numbers": [
+      0, 1, 6, 7, 8, 15, 16, 19, 22, 28, 30, 33, 40, 41, 46, 49, 50, 52
+    ],
     "link": {
       "name": "DeviantArt",
       "url": "https://www.deviantart.com/puurply"
@@ -29,7 +31,7 @@
   },
   {
     "name": "Unitoxik",
-    "numbers": [4],
+    "numbers": [4, 51],
     "link": {
       "name": "DeviantArt",
       "url": "https://www.deviantart.com/unitoxik"
@@ -89,7 +91,7 @@
   },
   {
     "name": "Kitsu",
-    "numbers": [29, 43, 44],
+    "numbers": [29, 43, 44, 53],
     "link": {
       "name": "DeviantArt",
       "url": "https://www.deviantart.com/kitsunemun"
@@ -118,5 +120,9 @@
       "name": "DeviantArt",
       "url": "https://www.deviantart.com/huggyakizz"
     }
+  },
+  {
+    "name": "Viivi_",
+    "numbers": [48]
   }
 ]
