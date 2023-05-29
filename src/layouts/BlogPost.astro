@@ -5,6 +5,7 @@ import Background from '../components/layout/Background.svelte';
 import { backgroundRandom } from '../data/scripts/imagesRandom';
 import PinkyMouse from '../components/eastereggs/PinkyMouse.svelte';
 import { pwaInfo } from 'virtual:pwa-info';
+import Link from '../components/Link.svelte';
 
 type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, heroImage, type } = Astro.props;
@@ -24,6 +25,9 @@ const { title, description, pubDate, heroImage, type } = Astro.props;
       name="description"
       content={description}
     />
+		<meta name="author" content="Herisdia" />
+		<meta property="og:type" content="article" />
+		{heroImage ? `<meta property="og:image" content=${heroImage} />` : ''}
     <meta name="keywords" content="diamant.dev,diamantdev,herisdia,diamant" />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -42,7 +46,10 @@ const { title, description, pubDate, heroImage, type } = Astro.props;
 								<h3 class="ml-1 w-fit flex justify-center items-center pl-2 border-l-4 border-solid text-xl font-bold text-[--primary]"
 								style="border-color: var(--secondary);" >{type}</h3>
 							</hgroup>
-							<article class="prose prose-invert prose-p:text-justify">
+							<div class="mb-8 flex flex-row items-center justify-start lg:justify-start flex-wrap gap-4">
+								<Link text="🏠" href="/" />
+							</div>
+							<article class="prose prose-invert prose-p:text-justify md:prose-lg lg:prose-xl max-w-none">
 								<slot />
 							</article>
   					</div>

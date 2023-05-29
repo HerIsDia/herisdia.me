@@ -23,8 +23,9 @@ export default defineConfig({
         'robots.txt',
         'apple-touch-icon.png',
         'logo.png',
-        'logos/*.png',
-        'backgrounds/*.png',
+        'logos/*',
+        'backgrounds/*',
+        'assets/*'
       ],
       manifest: {
         mode: 'development',
