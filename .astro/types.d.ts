@@ -199,9 +199,44 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"fr/je-pleure-devant-pokemon-et-je-lassume.md": {
-	id: "fr/je-pleure-devant-pokemon-et-je-lassume.md";
-  slug: "fr/je-pleure-devant-pokemon-et-je-lassume";
+"fr/2023.md": {
+	id: "fr/2023.md";
+  slug: "fr/2023";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fr/pokemon.md": {
+	id: "fr/pokemon.md";
+  slug: "fr/pokemon";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"jean-et-la-princesse/0.md": {
+	id: "jean-et-la-princesse/0.md";
+  slug: "jean-et-la-princesse/0";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"jean-et-la-princesse/1.md": {
+	id: "jean-et-la-princesse/1.md";
+  slug: "jean-et-la-princesse/1";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"jean-et-la-princesse/2.md": {
+	id: "jean-et-la-princesse/2.md";
+  slug: "jean-et-la-princesse/2";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"jean-et-la-princesse/3.md": {
+	id: "jean-et-la-princesse/3.md";
+  slug: "jean-et-la-princesse/3";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

@@ -8,7 +8,9 @@ import { pwaInfo } from 'virtual:pwa-info';
 import Link from '../components/Link.svelte';
 
 type Props = CollectionEntry<'blog'>['data'];
-const { title, description, pubDate, heroImage, type } = Astro.props;
+const { title, description, pubDate, heroImage, type, buttons } = Astro.props;
+
+const btns = buttons ? buttons : [];
 ---
 
 <!DOCTYPE html>
@@ -27,7 +29,7 @@ const { title, description, pubDate, heroImage, type } = Astro.props;
     />
 		<meta name="author" content="Herisdia" />
 		<meta property="og:type" content="article" />
-		{heroImage ? `<meta property="og:image" content=${heroImage} />` : ''}
+		<meta property="og:image" content={heroImage} />
     <meta name="keywords" content="diamant.dev,diamantdev,herisdia,diamant" />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -48,6 +50,11 @@ const { title, description, pubDate, heroImage, type } = Astro.props;
 							</hgroup>
 							<div class="mb-8 flex flex-row items-center justify-start lg:justify-start flex-wrap gap-4">
 								<Link text="🏠" href="/" />
+								{
+									btns.map((btn) => 
+										(<Link text={btn.label} href={btn.href} />)
+									)
+								}
 							</div>
 							<article class="prose prose-invert prose-p:text-justify md:prose-lg lg:prose-xl max-w-none">
 								<slot />
