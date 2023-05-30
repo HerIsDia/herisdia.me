@@ -206,9 +206,79 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"fr/a-vie.md": {
+	id: "fr/a-vie.md";
+  slug: "fr/a-vie";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fr/abandonner-ce-bouclier.md": {
+	id: "fr/abandonner-ce-bouclier.md";
+  slug: "fr/abandonner-ce-bouclier";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fr/la-plus-belle-des-fleurs.md": {
+	id: "fr/la-plus-belle-des-fleurs.md";
+  slug: "fr/la-plus-belle-des-fleurs";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fr/le-bonheur-chere-a-mon-coeur.md": {
+	id: "fr/le-bonheur-chere-a-mon-coeur.md";
+  slug: "fr/le-bonheur-chere-a-mon-coeur";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fr/le-conflis-de-l-arc-en-ciel.md": {
+	id: "fr/le-conflis-de-l-arc-en-ciel.md";
+  slug: "fr/le-conflis-de-l-arc-en-ciel";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fr/lune-jusquau-dix-huit.md": {
+	id: "fr/lune-jusquau-dix-huit.md";
+  slug: "fr/lune-jusquau-dix-huit";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "fr/pokemon.md": {
 	id: "fr/pokemon.md";
   slug: "fr/pokemon";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fr/precieuse-fleur-rose-a-larc-en-ciel.md": {
+	id: "fr/precieuse-fleur-rose-a-larc-en-ciel.md";
+  slug: "fr/precieuse-fleur-rose-a-larc-en-ciel";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fr/si-precieuse.md": {
+	id: "fr/si-precieuse.md";
+  slug: "fr/si-precieuse";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fr/soeur-de-coeur.md": {
+	id: "fr/soeur-de-coeur.md";
+  slug: "fr/soeur-de-coeur";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fr/solitude-rime-avec-torture.md": {
+	id: "fr/solitude-rime-avec-torture.md";
+  slug: "fr/solitude-rime-avec-torture";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

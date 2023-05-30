@@ -16,6 +16,7 @@ const blog = defineCollection({
       label: z.string(),
       href: z.string(),
     })).optional(),
+    authors: z.array(z.string()).optional(),
   }),
 });
 

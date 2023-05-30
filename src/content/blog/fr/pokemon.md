@@ -1,8 +1,8 @@
 ---
 title: Je pleure devant Pokémon et je l'assume.
 description: Cette lettre est destinée à avoir un message de fond. Avant de juger, lisez.
-type: Lettre ouverte.
-pubDate: "2022-06-29"
+type: Lettre ouverte
+pubDate: '2022-06-29'
 heroImage: /assets/pokemon.jpg
 ---
 

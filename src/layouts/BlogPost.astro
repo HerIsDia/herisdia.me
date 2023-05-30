@@ -8,9 +8,10 @@ import { pwaInfo } from 'virtual:pwa-info';
 import Link from '../components/Link.svelte';
 
 type Props = CollectionEntry<'blog'>['data'];
-const { title, description, pubDate, heroImage, type, buttons } = Astro.props;
+const { title, description, pubDate, heroImage, type, buttons, authors } = Astro.props;
 
 const btns = buttons ? buttons : [];
+const auths = authors ? authors : ['Diamant'];
 ---
 
 <!DOCTYPE html>
@@ -59,6 +60,10 @@ const btns = buttons ? buttons : [];
 							<article class="prose prose-invert prose-p:text-justify md:prose-lg lg:prose-xl max-w-none">
 								<slot />
 							</article>
+							<div class="mt-8">
+								<p class="text-[#ece0f3] text-left text-sm font-bold">🪶 {auths.join(", ")} <br /> 📆 {pubDate.toLocaleDateString()}
+								</p>
+							</div>
   					</div>
 					</div>
 					<Background src={heroImage ? heroImage : backgroundRandom()} client:load />
