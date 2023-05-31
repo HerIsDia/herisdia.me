@@ -1,0 +1,124 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import TextboxEA from '../components/layout/TextboxEA.svelte';
+import Background from '../components/layout/Background.svelte';
+import { backgroundRandom } from '../data/scripts/imagesRandom';
+import PinkyMouse from '../components/eastereggs/PinkyMouse.svelte';
+import { pwaInfo } from 'virtual:pwa-info';
+import Link from '../components/Link.svelte';
+
+type Props = CollectionEntry<'blog'>['data'];
+const { title, description, pubDate, heroImage, type, buttons, authors } = Astro.props;
+
+const btns = buttons ? buttons : [];
+const auths = authors ? authors : ['Diamant'];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+		<link rel="manifest" href="/manifest.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;500;600;700&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta
+      name="description"
+      content={description}
+    />
+		<meta name="author" content="Herisdia" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content={heroImage} />
+    <meta name="keywords" content="diamant.dev,diamantdev,herisdia,diamant" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+	</head>
+	<body class="bg-[#0f0f0f] overflow-hidden">
+		<TextboxEA client:only />
+		<PinkyMouse client:only />
+		<div id="container" class="h-screen w-full flex items-center justify-center opacity-[var(--ready)]" style="transition: opacity 0.69s ease-in-out;">
+  		<div id="content" class="w-full lg:w-6/7 font-Outfit">
+				<div class="lg:grid items-center lg:grid-flow-row lg:grid-cols-2 lg:grid-rows-1">
+    			<div id="box" class=" box text-white overflow-y-auto overflow-x-hidden grid items-center h-screen pt-16 pb-16 pl-4 pr-4 bg-[var(--bgshade)]" style="transition: background 0.69 ease-in-out;">
+  					<div id="boxcontent" class="block-inline font-mundial w-full text-[#ece0f3] text-left">
+							<hgroup class="mb-8 ">
+								<h1 class="text-4xl font-bold">{title}</h1>
+								<h3 class="ml-1 w-fit flex justify-center items-center pl-2 border-l-4 border-solid text-xl font-bold text-[--primary]"
+								style="border-color: var(--secondary);" >{type}</h3>
+							</hgroup>
+							<div class="mb-8 flex flex-row items-center justify-start lg:justify-start flex-wrap gap-4">
+								<Link text="🏠" href="/" />
+								{
+									btns.map((btn) => 
+										(<Link text={btn.label} href={btn.href} />)
+									)
+								}
+							</div>
+							<article class="prose prose-invert prose-p:text-justify md:prose-lg lg:prose-xl max-w-none">
+								<slot />
+							</article>
+							<div class="mt-8">
+								<p class="text-[#ece0f3] text-left text-sm font-bold">🪶 {auths.join(", ")} <br /> 📆 {pubDate.toLocaleDateString()}
+								</p>
+							</div>
+  					</div>
+					</div>
+					<Background src={heroImage ? heroImage : backgroundRandom()} client:load />
+  			</div>
+			</div>
+		</div>
+	</body>
+	<script src="/src/pwa.ts"></script>
+	{ pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
+</html>
+
+<style is:global>
+	:root {
+		--primary: #b69bc9;
+		--secondary: #e2ceef00;
+		--bgshade: #0f0f0f;
+		--selection: #ca9eec69;
+		--selection-btn: #0f0f0f;
+		--ready: 0;
+
+		--bg: 69px;
+		--box: -69px;
+	}
+
+	::selection {
+		background: var(--selection);
+		color: white;
+	}
+
+	.bg {
+    transform: translateX(var(--bg));
+		transition: all 0.69s ease-out;
+  }
+
+	.box {
+		transform: translateX(var(--box));
+		transition: all 0.69s ease-out;
+	}
+
+	@tailwind base;
+	@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+  p, ul {
+    @apply text-base mt-1 mb-1;
+  }
+
+	@tailwind components;
+	@tailwind utilities;
+}
+</style>

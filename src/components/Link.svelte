@@ -24,7 +24,6 @@
     font-family: inherit;
     background-color: var(--selection-btn);
     cursor: pointer;
-    transition: all 0.25s ease-in-out;
   }
 
   a:hover {
