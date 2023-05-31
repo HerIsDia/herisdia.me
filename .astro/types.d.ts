@@ -220,6 +220,34 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"fr/jean-et-la-princesse/0.md": {
+	id: "fr/jean-et-la-princesse/0.md";
+  slug: "fr/jean-et-la-princesse/0";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fr/jean-et-la-princesse/1.md": {
+	id: "fr/jean-et-la-princesse/1.md";
+  slug: "fr/jean-et-la-princesse/1";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fr/jean-et-la-princesse/2.md": {
+	id: "fr/jean-et-la-princesse/2.md";
+  slug: "fr/jean-et-la-princesse/2";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fr/jean-et-la-princesse/3.md": {
+	id: "fr/jean-et-la-princesse/3.md";
+  slug: "fr/jean-et-la-princesse/3";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "fr/la-plus-belle-des-fleurs.md": {
 	id: "fr/la-plus-belle-des-fleurs.md";
   slug: "fr/la-plus-belle-des-fleurs";
@@ -279,34 +307,6 @@ declare module 'astro:content' {
 "fr/solitude-rime-avec-torture.md": {
 	id: "fr/solitude-rime-avec-torture.md";
   slug: "fr/solitude-rime-avec-torture";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"jean-et-la-princesse/0.md": {
-	id: "jean-et-la-princesse/0.md";
-  slug: "jean-et-la-princesse/0";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"jean-et-la-princesse/1.md": {
-	id: "jean-et-la-princesse/1.md";
-  slug: "jean-et-la-princesse/1";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"jean-et-la-princesse/2.md": {
-	id: "jean-et-la-princesse/2.md";
-  slug: "jean-et-la-princesse/2";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"jean-et-la-princesse/3.md": {
-	id: "jean-et-la-princesse/3.md";
-  slug: "jean-et-la-princesse/3";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

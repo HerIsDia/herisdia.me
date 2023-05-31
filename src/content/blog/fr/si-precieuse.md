@@ -1,6 +1,6 @@
 ---
 title: Si précieuse.
-description: \"C'était sur en fait\". 🤍
+description: « C'était sur en fait. » 🤍
 pubDate: '2022-12-14'
 type: Poème
 ---

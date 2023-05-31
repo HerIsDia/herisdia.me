@@ -1,0 +1,43 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from 'astro:content';
+import Title from '../../components/Title.svelte';
+import Links from '../../components/Links.svelte';
+import Link from '../../components/Link.svelte';
+import Article from '../../components/Article.svelte';
+
+export const prerender = true;
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).filter(
+  (post) => (post.slug.startsWith('fr/'))
+);
+---
+
+<Layout title="Mes écrits">
+  <Title
+  title='Voici tout mes textes publiés en français.'
+  subtitle={`Actuellement ${posts.length} textes publiés.`}
+  />
+
+  <Links>
+    <Link
+      text='< Retour'
+      href='../'
+      target={true}
+    />
+    <Link
+      color='#f5d7bc'
+      text='Mes novels sur Wattpad'
+      href='https://www.wattpad.com/user/HerIsDia'
+      target={true}
+    />
+  </Links>
+  
+    {
+      posts.map((post) => (
+        <Article url={post.slug} date={post.data.pubDate.toLocaleDateString()} title={post.data.title} description={post.data.description} />
+      ))
+    }
+</Layout>
