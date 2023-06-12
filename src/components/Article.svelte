@@ -6,7 +6,6 @@
   export let title: string;
   export let description: string;
   export let type: string;
-  console.log(date);
 
   moment.locale(url.split('/')[0]);
   const strDate = moment(date).fromNow();
