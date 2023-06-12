@@ -1,9 +1,15 @@
 <script lang="ts">
+  import moment from 'moment';
+
   export let url: string;
-  export let date: string;
+  export let date: Date;
   export let title: string;
   export let description: string;
   export let type: string;
+  console.log(date);
+
+  moment.locale(url.split('/')[0]);
+  const strDate = moment(date).fromNow();
 </script>
 
 <div class="mt-8 link">
@@ -15,7 +21,7 @@
       <p class="text-justify font-light">
         {description}
         <br />
-        <span class="text-[--primary]">{type}, {date}.</span>
+        <span class="text-[--primary]">{type}, {strDate}.</span>
       </p>
     </hgroup>
   </a>

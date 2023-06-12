@@ -50,7 +50,7 @@ const auths = authors ? authors : ['Diamant'];
 								style="border-color: var(--secondary);" >{type}.</h3>
 							</hgroup>
 							<div class="mb-8 flex flex-row items-center justify-start lg:justify-start flex-wrap gap-4">
-								<Link text={`< ${lang == "en" ? 'Back' : "Retour"}`} href={`/${lang}/${lang == "en" ? 'writes' : "ecrits"}/`} />
+								<Link text={`< ${lang == "en" ? 'My writings' : "Mes écrits"}`} href={`/${lang}/${lang == "en" ? 'writes' : "ecrits"}/`} />
 								{
 									btns.map((btn) => 
 										(<Link text={btn.label} href={btn.href} />)
@@ -61,7 +61,8 @@ const auths = authors ? authors : ['Diamant'];
 								<slot />
 							</article>
 							<div class="mt-8">
-								<p class="text-[#ece0f3] text-left text-sm font-bold">🪶 {auths.join(", ")} <br /> 📆 {pubDate.toLocaleDateString()}
+								<p class="text-[#ece0f3] text-left text-sm font-bold">🪶 {auths.join(", ")} <br /> 📆 {pubDate.toLocaleDateString(lang == 'fr' ? 'fr-fr' : 'en-us',{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+									)}
 								</p>
 							</div>
   					</div>
