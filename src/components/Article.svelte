@@ -3,16 +3,19 @@
   export let date: string;
   export let title: string;
   export let description: string;
+  export let type: string;
 </script>
 
 <div class="mt-8 link">
   <a href={`/read/${url}/`} class="">
     <hgroup>
       <h3 class="font-bold">
-        {date}: {title}
+        {title}
       </h3>
       <p class="text-justify font-light">
         {description}
+        <br />
+        <span class="text-[--primary]">{type}, {date}.</span>
       </p>
     </hgroup>
   </a>
