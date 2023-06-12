@@ -3,6 +3,7 @@ title: Si précieuse.
 description: « C'était sur en fait. » 🤍
 pubDate: '2022-12-14'
 type: Poème
+heroImage: '/assets/DiamantAndKiara by sashimi.png'
 ---
 
 Je la vois déjà, en lisant ces premiers mots du poème,  
@@ -36,7 +37,7 @@ D'être la pour moi, d'être si généreuse.
 Généreuse d'être vraiment, tellement amical,  
 Généreuse de ne pas vouloir me faire de mal.
 
-Tu n'es ni un *Sans-cœur *dans ce royaume,  
+Tu n'es ni un _Sans-cœur_ dans ce royaume,  
 Ni _cette fleur sadique_ aux six pétales jaune.
 
 Tu es pour moi bien plus qu'une simple "amie",  

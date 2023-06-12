@@ -3,6 +3,7 @@ title: Sœur de cœur.
 description: A ma plus tendre des sœur, Qui chaque jour me fais mon bonheur, L’envie d’écrire ce que je ressent, J’ai envie de le faire publiquement.
 pubDate: '2022-06-29'
 type: Poème
+heroImage: /assets/soeur-de-coeur.png
 ---
 
 A ma plus tendre des sœur,  

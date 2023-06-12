@@ -15,8 +15,10 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 const { Content } = await post.render();
+const lang = post.slug.split('/')[0];
+const data = {...await post.data, lang};
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...data}>
 	<Content />
 </BlogPost>

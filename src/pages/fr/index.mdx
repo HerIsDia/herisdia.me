@@ -33,33 +33,34 @@ import Link from '../../components/Link.svelte';
 <br />
 
 <Links>
-  <Link color='#b69bc9' text='Mes écrits' href='./ecrits' />
+  <Link color='#b69bc9' text='Mes écrits' href='/fr/ecrits' />
   <Link
     color='#ebaa71'
     text='Mes dessins'
     href='https://www.artfol.me/diamant'
-    target={true}
+    newTab={true}
   />
   <Link
     color='#f87171'
     text='Mes vidéos'
     href='https://www.youtube.com/@Diamant./'
-    target={true}
+    newTab={true}
   />
-</Links>
-
-<Links>
   <Link
     color='#facc15'
     text='Github'
     href='https://github.com/herisdia'
-    target={true}
+    newTab={true}
   />
+</Links>
+
+<Links>
+  <Link color='#d4d4d4' text='Version anglaise' href='/en/' />
   <Link
     color='#d4d4d4'
     text='Code source'
     href='https://github.com/herisdia/herisdia.me'
-    target={true}
+    newTab={true}
   />
   <Link color='#d4d4d4' text='Crédits des arts' href='/fr/credits/' />
 </Links>

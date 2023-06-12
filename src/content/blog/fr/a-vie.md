@@ -3,6 +3,7 @@ title: À vie.
 description: Juste... Merci pour tout... 💜
 pubDate: '2022-11-06'
 type: Lettre ouverte
+heroImage: /assets/a-vie.png
 ---
 
 Bienvenue dans je pense la lettre ouverte qui je pense est la plus importante à mes yeux à ce jour que j'ai eu à écrire. J'avais besoin beaucoup de m'exprimer sur ce qui s'est passé récemment pour moi, évènement qui est gravé et qui sera gravé au plus profond de mon cœur, à vie.

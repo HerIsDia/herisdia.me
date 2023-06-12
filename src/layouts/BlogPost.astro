@@ -8,14 +8,14 @@ import { pwaInfo } from 'virtual:pwa-info';
 import Link from '../components/Link.svelte';
 
 type Props = CollectionEntry<'blog'>['data'];
-const { title, description, pubDate, heroImage, type, buttons, authors } = Astro.props;
+const { title, description, pubDate, heroImage, type, buttons, authors, lang } = Astro.props;
 
 const btns = buttons ? buttons : [];
 const auths = authors ? authors : ['Diamant'];
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
@@ -50,7 +50,7 @@ const auths = authors ? authors : ['Diamant'];
 								style="border-color: var(--secondary);" >{type}.</h3>
 							</hgroup>
 							<div class="mb-8 flex flex-row items-center justify-start lg:justify-start flex-wrap gap-4">
-								<Link text="🏠" href="/" />
+								<Link text={`< ${lang == "en" ? 'Back' : "Retour"}`} href={`/${lang}/${lang == "en" ? 'writes' : "ecrits"}/`} />
 								{
 									btns.map((btn) => 
 										(<Link text={btn.label} href={btn.href} />)

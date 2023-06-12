@@ -15,7 +15,7 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<Layout title="Mes écrits">
+<Layout title="Mes écrits" image="/logos/50.png">
   <Title
   title='Voici tout mes textes publiés en français.'
   subtitle={`Actuellement ${posts.length} textes publiés.`}
@@ -24,14 +24,18 @@ const posts = (await getCollection('blog')).sort(
   <Links>
     <Link
       text='< Retour'
-      href='../'
-      target={true}
+      href='/fr/'
     />
     <Link
       color='#f5d7bc'
       text='Mes novels sur Wattpad'
       href='https://www.wattpad.com/user/HerIsDia'
-      target={true}
+      newTab={true}
+    />
+    <Link
+      text='RSS'
+      href='/fr/rss.xml'
+      newTab={true}
     />
   </Links>
   

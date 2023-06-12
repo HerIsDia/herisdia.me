@@ -15,7 +15,7 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<Layout title="My writings">
+<Layout title="My writings" image="/logos/50.png">
   <Title
   title='There is all of my english writings.'
   subtitle={`Actually ${posts.length} writings.`}
@@ -24,8 +24,12 @@ const posts = (await getCollection('blog')).sort(
   <Links>
     <Link
       text='< Back'
-      href='../'
-      target={true}
+      href='/en/'
+    />
+    <Link
+      text='RSS'
+      href='/en/rss.xml'
+      newTab={true}
     />
   </Links>
   

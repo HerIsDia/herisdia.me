@@ -3,6 +3,7 @@ title: L'une jusqu'au dix-huit.
 description: Un poème très conceptuelle pour l'anniversaire d'une personne très spéciale pour moi. 18 strophes pour 18 bougies.
 type: Poème
 pubDate: '2022-10-07'
+heroImage: /assets/lune-jusquau-dix-huit.png
 ---
 
 **Une** si belle personne,  

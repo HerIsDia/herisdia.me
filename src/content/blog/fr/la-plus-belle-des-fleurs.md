@@ -3,6 +3,7 @@ title: La plus belle des fleurs.
 description: Chaque jour dans ce jardin, J’essaye de te prendre bien soin...
 type: Poème
 pubDate: '2022-06-29'
+heroImage: '/assets/la-plus-belle-des-fleurs.png'
 ---
 
 Chaque jour dans ce jardin,  

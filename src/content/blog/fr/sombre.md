@@ -10,7 +10,7 @@ pubDate: 2023-04-12
 # authors:
 #   - Diamant
 
-# heroImage:
+heroImage: /assets/sombre.jpg
 ---
 
 Il y a des moments dans une vie ou tu es tellement profond que tu te demandes pourquoi tu existes encore, une vie ou chaque jour, tu soufres tellement intérieurement que ça peut tellement exploser à chaque seconde, et que tu te demandes tellement ce que tu as fait pour mériter d’être si profond que tu n’arrives même plus à pleurer tellement tes larmes ont été déversées.

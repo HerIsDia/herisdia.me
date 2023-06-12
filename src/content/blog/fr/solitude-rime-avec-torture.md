@@ -3,6 +3,7 @@ title: Ce n'est pas pour rien que solitude rime avec torture.
 description: Ce poème n'est pas à but joyeux, j'avais juste besoin d'écrire et de me libérer un peu.
 pubDate: '2023-02-26'
 type: Poème
+heroImage: /assets/solitude-rime-avec-torture.jpg
 ---
 
 > ⚠️ Ce poème n'est pas à but joyeux, j'avais juste besoin d'écrire et de me libérer un peu.
