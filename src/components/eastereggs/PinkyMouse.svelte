@@ -13,6 +13,8 @@
       img.style.visibility = 'visible';
       document.body.style.cursor = 'none';
       document.addEventListener('mousemove', (e) => {
+        img.style.opacity = '1';
+
         const mouseY = e.clientY;
         const mouseX = e.clientX;
 
@@ -34,6 +36,7 @@
   alt="pinkymouse"
   width="32px"
   height="32px"
+  style="opacity: 0;"
 />
 
 <style>

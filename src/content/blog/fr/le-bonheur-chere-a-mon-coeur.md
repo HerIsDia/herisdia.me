@@ -4,6 +4,7 @@ description: Aujourd’hui, de la même manière que d'autres lettres, j’ai en
 pubDate: '2022-06-29'
 type: Lettres ouverte
 heroImage: '/assets/le-bonheur-chere-a-mon-coeur.png'
+imageCredit: Dessin par Taiga Blackfield.
 ---
 
 Cela fait un petit moment n’est ce pas que je n’ai pas écris ici, n’est ce pas ?

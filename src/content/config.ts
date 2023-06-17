@@ -18,6 +18,7 @@ const blog = defineCollection({
     })).optional(),
     authors: z.array(z.string()).optional(),
     lang: z.string().optional(),
+    imageCredit: z.string().optional(),
   }),
 });
 

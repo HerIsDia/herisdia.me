@@ -4,6 +4,7 @@ description: « C'était sur en fait. » 🤍
 pubDate: '2022-12-14'
 type: Poème
 heroImage: '/assets/DiamantAndKiara by sashimi.png'
+imageCredit: Dessin par Sashimi.
 ---
 
 Je la vois déjà, en lisant ces premiers mots du poème,  

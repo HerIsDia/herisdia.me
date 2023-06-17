@@ -4,6 +4,7 @@ description: A ma plus tendre des sœur, Qui chaque jour me fais mon bonheur, L�
 pubDate: '2022-06-29'
 type: Poème
 heroImage: /assets/soeur-de-coeur.png
+imageCredit: Dessin par Chrystaldraw.
 ---
 
 A ma plus tendre des sœur,  

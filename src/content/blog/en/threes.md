@@ -11,6 +11,7 @@ pubDate: 2023-06-07
 #   - Diamant
 
 heroImage: /assets/threes.png
+imageCredit: Screenshot of Final Fantasy 14.
 ---
 
 My dear precious Emily,<br>

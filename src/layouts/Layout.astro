@@ -5,7 +5,7 @@ import { backgroundRandom } from '../data/scripts/imagesRandom';
 import PinkyMouse from '../components/eastereggs/PinkyMouse.svelte';
 import { pwaInfo } from 'virtual:pwa-info';
 
-const {frontmatter, title, description, image} = Astro.props;
+const {frontmatter, title, description, image, desc} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@ const {frontmatter, title, description, image} = Astro.props;
     					<slot />
   					</div>
 					</div>
-					<Background src={frontmatter && frontmatter.bgSrc ? frontmatter.bgSrc : image ? image : backgroundRandom()} client:load />
+					<Background src={frontmatter && frontmatter.bgSrc ? frontmatter.bgSrc : image ? image : backgroundRandom()} desc={frontmatter && frontmatter.bgSrcD ? frontmatter.bgSrcD : desc ? desc : 'Screenshot of the Sims 4.'} client:load />
   			</div>
 			</div>
 		</div>

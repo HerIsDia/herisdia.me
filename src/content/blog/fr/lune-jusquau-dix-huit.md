@@ -4,6 +4,7 @@ description: Un poème très conceptuelle pour l'anniversaire d'une personne tr�
 type: Poème
 pubDate: '2022-10-07'
 heroImage: /assets/lune-jusquau-dix-huit.png
+imageCredit: Dessin par Linkann.
 ---
 
 **Une** si belle personne,  

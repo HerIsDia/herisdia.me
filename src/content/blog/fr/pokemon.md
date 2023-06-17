@@ -4,6 +4,7 @@ description: Cette lettre est destinée à avoir un message de fond. Avant de ju
 type: Lettre ouverte
 pubDate: '2022-06-29'
 heroImage: /assets/pokemon.jpg
+imageCredit: Image de couverture de la saison 24 de Pokémon.
 ---
 
 Cette lettre est destinée à avoir un message de fond. Avant de juger, lisez.
