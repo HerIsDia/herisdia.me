@@ -290,6 +290,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"fr/positive.md": {
+	id: "fr/positive.md";
+  slug: "fr/positive";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "fr/precieuse-fleur-rose-a-larc-en-ciel.md": {
 	id: "fr/precieuse-fleur-rose-a-larc-en-ciel.md";
   slug: "fr/precieuse-fleur-rose-a-larc-en-ciel";
