@@ -8,7 +8,7 @@
   export let type: string;
 
   moment.locale(url.split('/')[0]);
-  const strDate = moment(date).fromNow();
+  $: strDate = moment(date).fromNow();
 </script>
 
 <div class="mt-8 link">
