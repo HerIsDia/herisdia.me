@@ -1,5 +1,5 @@
 ---
-title: Positive
+title: Positive.
 description: Mes derniers textes n’étaient pas vraiment très très joyeux j’en suis consciente, c’est pourquoi aujourd’hui j’ai décidé d’écrire une petite lettre ouverte pour un peu extérioriser de la positivité que j’ai eu au fil de ces dernières semaines et de ces derniers mois.
 type: Lettre ouverte
 pubDate: '2023-06-19T03:40:53.117Z'
