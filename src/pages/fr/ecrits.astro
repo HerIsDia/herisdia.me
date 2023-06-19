@@ -41,7 +41,7 @@ const posts = (await getCollection('blog')).sort(
   
     {
       posts.map((post) => (
-        <Article url={post.slug} type={post.data.type} date={post.data.pubDate} title={post.data.title} description={post.data.description} />
+        <Article url={post.slug} type={post.data.type} date={post.data.pubDate} title={post.data.title} description={post.data.description} client:load />
       ))
     }
 </Layout>
