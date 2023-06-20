@@ -121,5 +121,24 @@ const auths = authors ? authors : ['Diamant'];
 
 	@tailwind components;
 	@tailwind utilities;
+
+	::-webkit-scrollbar {
+		width: 0.4rem;
+	}
+
+	::-webkit-scrollbar-track {
+		background: var(--bgshade);
+		border-radius: 0.5rem;
+
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: var(--primary);
+		border-radius: 0.5rem;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--secondary);
+	}
 }
 </style>
