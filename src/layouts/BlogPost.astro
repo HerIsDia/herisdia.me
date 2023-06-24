@@ -6,6 +6,7 @@ import { backgroundRandom } from '../data/scripts/imagesRandom';
 import PinkyMouse from '../components/eastereggs/PinkyMouse.svelte';
 import { pwaInfo } from 'virtual:pwa-info';
 import Link from '../components/Link.svelte';
+import ShareBtn from '../components/shareBtn.svelte';
 
 type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, heroImage, type, buttons, authors, lang, imageCredit } = Astro.props;
@@ -51,6 +52,7 @@ const auths = authors ? authors : ['Diamant'];
 							</hgroup>
 							<div class="mb-8 flex flex-row items-center justify-start lg:justify-start flex-wrap gap-4">
 								<Link text={`< ${lang == "en" ? 'My writings' : "Mes écrits"}`} href={`/${lang}/${lang == "en" ? 'writes' : "ecrits"}/`} />
+								<ShareBtn text={`${lang == "en" ? 'Share' : "Partager"}`} title={title} description={description} client:only />
 								{
 									btns.map((btn) => 
 										(<Link text={btn.label} href={btn.href} />)
