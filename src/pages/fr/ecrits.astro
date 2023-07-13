@@ -13,6 +13,13 @@ const posts = (await getCollection('blog')).sort(
 ).filter(
   (post) => (post.slug.startsWith('fr/'))
 );
+
+const categories = posts.map((post) => post.data.type).filter((value, index, self) => self.indexOf(value) === index).map((category) => {
+  return {
+    category: category,
+    posts: posts.filter((post) => post.data.type === category)
+  }
+});
 ---
 
 <Layout title="Mes écrits" image="/logos/50.png" desc="Dessin par Puurply.">
@@ -27,6 +34,10 @@ const posts = (await getCollection('blog')).sort(
       href='/fr/'
     />
     <Link
+      text='Mes écrits en anglais'
+      href='/fr/ecrits'
+    />
+    <Link
       color='#f5d7bc'
       text='Mes novels sur Wattpad'
       href='https://www.wattpad.com/user/HerIsDia'
@@ -38,10 +49,67 @@ const posts = (await getCollection('blog')).sort(
       newTab={true}
     />
   </Links>
+  <Links>
+    <a
+      id="button"
+      class="active"
+      href="#"
+      style="padding: 0.3em 0.6em; font-size: 0.7rem"
+      data-category="all"
+    >
+      Tous ({posts.length})
+    </a>
+    {
+    categories.map((category) => (
+      <a
+        id="button"
+        data-category={category.category}
+        href="#"
+        style="padding: 0.3em 0.6em; font-size: 0.7rem"
+      >
+        {`${category.category} (${category.posts.length})`}
+      </a>
+    ))
+  }
+  </Links>
   
     {
       posts.map((post) => (
-        <Article url={post.slug} type={post.data.type} date={post.data.pubDate} title={post.data.title} description={post.data.description} client:load />
+        <div id="article" data-category={post.data.type}>
+          <Article url={post.slug} type={post.data.type} date={post.data.pubDate} title={post.data.title} description={post.data.description} client:load />
+        </div>
       ))
     }
 </Layout>
+
+<script>
+
+const btns: NodeListOf<HTMLLinkElement> = document.querySelectorAll('#button[data-category]')
+const articles: NodeListOf<HTMLDivElement> = document.querySelectorAll('#article[data-category]')
+
+btns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    btns.forEach((btn) => {
+      btn.classList.remove('active')
+    })
+    btn.classList.add('active')
+    articles.forEach((article) => {
+      if (btn.dataset.category === 'all') {
+        article.style.display = 'block'
+      } else if (article.dataset.category === btn.dataset.category) {
+        article.style.display = 'block'
+      } else {
+        article.style.display = 'none'
+      }
+    })
+  })
+})
+
+</script>
+
+<style>
+  #button.active {
+    color: white;
+    border-color: var(--color);
+  }
+</style>

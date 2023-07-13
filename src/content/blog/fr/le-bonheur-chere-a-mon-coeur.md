@@ -2,7 +2,7 @@
 title: Le bonheur chère à mon cœur.
 description: Aujourd’hui, de la même manière que d'autres lettres, j’ai envie de vous parler de personnes qui sont chères à mon cœur en ces temps-ci.
 pubDate: '2022-06-29'
-type: Lettres ouverte
+type: Lettre ouverte
 heroImage: '/assets/le-bonheur-chere-a-mon-coeur.png'
 imageCredit: Dessin par Taiga Blackfield.
 ---

@@ -11,27 +11,3 @@
   {href}
   target={newTab ? '_blank' : '_self'}>{text}</a
 >
-
-<style>
-  a {
-    color: var(--color);
-    transition: all 0.2s ease-in-out;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: var(--selection-btn);
-    cursor: pointer;
-  }
-
-  a:hover {
-    color: white;
-    border-color: var(--color);
-  }
-  a:focus,
-  a:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
-</style>
