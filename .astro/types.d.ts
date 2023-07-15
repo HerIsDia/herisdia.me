@@ -304,6 +304,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"fr/seule-rime-avec-pleurs.md": {
+	id: "fr/seule-rime-avec-pleurs.md";
+  slug: "fr/seule-rime-avec-pleurs";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "fr/si-precieuse.md": {
 	id: "fr/si-precieuse.md";
   slug: "fr/si-precieuse";

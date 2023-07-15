@@ -1,0 +1,57 @@
+---
+layout: '../layouts/Layout.astro'
+title: '🌱 Diamanda Mystiqueat.'
+bgSrc: '/diamanda.png'
+bgSrcD: 'Final Fantasy 14.'
+---
+
+import Title from '../components/Title.svelte';
+import List from '../components/List.svelte';
+import Links from '../components/Links.svelte';
+import Link from '../components/Link.svelte';
+
+<meta property='og:type' content='website' />
+<meta property='og:title' content='🌱 Diamanda Mystiqueat.' />
+<meta property='og:description' content='My FF14 Character.' />
+<meta property='og:image' content='/diamanda.png' />
+
+<meta property='twitter:card' content='summary_large_image' />
+<meta property='twitter:title' content='🌱 Diamanda Mystiqueat.' />
+<meta property='twitter:description' content='My FF14 Character.' />
+<meta property='twitter:image' content='/diamanda.png' />
+
+<Title
+  title='🌱 Diamanda Mystiqueat.'
+  subtitle='She/Her.'
+  imageAlt='Diamanda'
+  image='/diamandapfp.png'
+/>
+
+- 🌱 I'm a beginner, so I'm still learning. (Started to play 25th June 2023.)
+- 🐟 Fishing fishing fishing fishing...
+- 🧙 White mage as my main job.
+- 🐟 Did I mention fishing?
+
+<br />
+
+- 👀 On Chrystal > Malboro.
+- 🍍 Eat pineapple's pizza.
+- 🩷 Loves RPing sometimes.
+- 🐟 Maybe currently on a boat for fishing.
+
+<br />
+
+<Links>
+  <Link
+    color='#b69bc9'
+    text="My character's profile"
+    href='https://na.finalfantasyxiv.com/lodestone/character/48341270'
+    newTab={true}
+  />
+  <Link
+    color='#d4d4d4'
+    text='My free company'
+    href='https://na.finalfantasyxiv.com/lodestone/freecompany/9233927348481549851/'
+    newTab={true}
+  />
+</Links>
