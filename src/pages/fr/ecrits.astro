@@ -30,6 +30,7 @@ const categories = posts.map((post) => post.data.type).filter((value, index, sel
 
   <Links>
     <Link
+    first
       text='< Retour'
       href='/fr/'
     />
@@ -44,17 +45,18 @@ const categories = posts.map((post) => post.data.type).filter((value, index, sel
       newTab={true}
     />
     <Link
+    last
       text='RSS'
       href='/fr/rss.xml'
       newTab={true}
     />
   </Links>
-  <Links>
+  <Links sub>
     <a
+    fist
       id="button"
       class="active"
       href="#"
-      style="padding: 0.3em 0.6em; font-size: 0.7rem"
       data-category="all"
     >
       Tous ({posts.length})
@@ -65,7 +67,6 @@ const categories = posts.map((post) => post.data.type).filter((value, index, sel
         id="button"
         data-category={category.category}
         href="#"
-        style="padding: 0.3em 0.6em; font-size: 0.7rem"
       >
         {`${category.category} (${category.posts.length})`}
       </a>

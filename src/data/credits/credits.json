@@ -10,7 +10,7 @@
   {
     "name": "Puurply",
     "numbers": [
-      0, 1, 6, 7, 8, 15, 16, 19, 22, 28, 30, 33, 40, 41, 46, 49, 50, 52
+      0, 1, 6, 7, 8, 15, 16, 19, 22, 28, 30, 33, 40, 41, 46, 49, 50, 54
     ],
     "link": {
       "name": "DeviantArt",
@@ -91,7 +91,7 @@
   },
   {
     "name": "Kitsu",
-    "numbers": [29, 43, 44, 53],
+    "numbers": [29, 43, 44, 52, 53, 55],
     "link": {
       "name": "DeviantArt",
       "url": "https://www.deviantart.com/kitsunemun"

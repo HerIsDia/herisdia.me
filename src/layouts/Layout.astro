@@ -1,5 +1,4 @@
 ---
-import TextboxEA from '../components/layout/TextboxEA.svelte';
 import Background from '../components/layout/Background.svelte';
 import { backgroundRandom } from '../data/scripts/imagesRandom';
 import PinkyMouse from '../components/eastereggs/PinkyMouse.svelte';
@@ -28,7 +27,6 @@ const {frontmatter, title, description, image, desc} = Astro.props;
     <meta name="language" content="English" />
 	</head>
 	<body class="bg-[#0f0f0f] overflow-hidden">
-		<TextboxEA client:only />
 		<PinkyMouse client:only />
 		<div id="container" class="scrollbar h-screen w-full flex items-center justify-center opacity-[var(--ready)]" style="transition: opacity 0.69s ease-in-out;">
   		<div id="content" class="w-full lg:w-6/7 font-Outfit">
@@ -113,12 +111,13 @@ const {frontmatter, title, description, image, desc} = Astro.props;
 		background: var(--secondary);
 	}
 
-	#button {
+	#row #button {
     color: var(--color);
     transition: all 0.2s ease-in-out;
-    border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
@@ -126,12 +125,24 @@ const {frontmatter, title, description, image, desc} = Astro.props;
     cursor: pointer;
   }
 
-  #button:hover {
+  #row > #button:first-child {
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    margin-left: 0rem;
+  }
+
+	#row > #button:last-child {
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin-right: 0rem;
+  }
+
+  #row #button:hover {
     color: white;
     border-color: var(--color);
   }
-  #button:focus,
-  #button:focus-visible {
+  #row #button:focus,
+  #row #button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
 </style>

@@ -22,7 +22,7 @@ import Link from '../../components/Link.svelte';
 - 📂 Développeuse en typescript.
 - 🪶 Écrivaine à ses heures perdues.
 - 🖌️ Dessinatrice débutante. (digital seulement.)
-- 💾 Vidéaste française.
+- 💾 Apprend le développement de jeux.
 
 <br />
 
@@ -41,26 +41,38 @@ import Link from '../../components/Link.svelte';
     newTab={true}
   />
   <Link
+    color='#e68c9c'
+    text='Mes jeux'
+    href='https://herisdia.itch.io'
+    newTab={true}
+  />
+  <Link
     color='#f87171'
     text='Mes vidéos'
     href='https://www.youtube.com/@Diamant./'
     newTab={true}
   />
+</Links>
+
+<Links sub>
+  <Link color='#d4d4d4' first text='Version anglaise' href='/en/' />
   <Link
-    color='#facc15'
-    text='Github'
+    color='#d4d4d4'
+    text='Github (Mes projets)'
     href='https://github.com/herisdia'
     newTab={true}
   />
-</Links>
-
-<Links>
-  <Link color='#d4d4d4' text='Version anglaise' href='/en/' />
+  <Link
+    color='#d4d4d4'
+    text='Mes vidéos (anglaise)'
+    href='https://www.youtube.com/@HerIsDia/'
+    newTab={true}
+  />
   <Link
     color='#d4d4d4'
     text='Code source'
     href='https://github.com/herisdia/herisdia.me'
     newTab={true}
   />
-  <Link color='#d4d4d4' text='Crédits des arts' href='/fr/credits/' />
+  <Link color='#d4d4d4' last text='Crédits des arts' href='/fr/credits/' />
 </Links>

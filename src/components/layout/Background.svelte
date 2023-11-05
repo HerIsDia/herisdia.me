@@ -29,7 +29,7 @@
     class="object-cover min-h-screen w-full"
   />
   <div
-    class="absolute bottom-0 right-0 rounded-tl-lg bg-[#0f0f0f] text-xs text-white"
+    class="absolute bottom-0 right-0 rounded-tl-2xl bg-[#0f0f0f] text-xs text-white"
   >
     <div class="bg-[var(--bgshade)] p-4">
       <span class="font-bold">Image source:</span>

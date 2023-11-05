@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import TextboxEA from '../components/layout/TextboxEA.svelte';
 import Background from '../components/layout/Background.svelte';
 import { backgroundRandom } from '../data/scripts/imagesRandom';
 import PinkyMouse from '../components/eastereggs/PinkyMouse.svelte';
@@ -38,7 +37,6 @@ const auths = authors ? authors : ['Diamant'];
     <meta name="language" content="English" />
 	</head>
 	<body class="bg-[#0f0f0f] overflow-hidden">
-		<TextboxEA client:only />
 		<PinkyMouse client:only />
 		<div id="container" class="h-screen w-full flex items-center justify-center opacity-[var(--ready)]" style="transition: opacity 0.69s ease-in-out;">
   		<div id="content" class="w-full lg:w-6/7 font-Outfit">
@@ -50,9 +48,12 @@ const auths = authors ? authors : ['Diamant'];
 								<h3 class="ml-1 w-fit flex justify-center items-center pl-2 border-l-4 border-solid text-xl font-bold text-[--primary]"
 								style="border-color: var(--secondary);" >{type}.</h3>
 							</hgroup>
-							<div class="mb-8 flex flex-row items-center justify-start lg:justify-start flex-wrap gap-4">
+							<div id="row" class="mb-8 flex flex-row items-center justify-start lg:justify-start flex-wrap">
 								<Link text={`< ${lang == "en" ? 'My writings' : "Mes écrits"}`} href={`/${lang}/${lang == "en" ? 'writes' : "ecrits"}/`} />
-								<ShareBtn text={`${lang == "en" ? 'Share' : "Partager"}`} title={title} description={description} client:only />
+								<span id="button">
+									<ShareBtn text={`${lang == "en" ? 'Share' : "Partager"}`} copyText={`${lang == "en" ? 'Copy URL' : "Copier l'URL"}`} 
+									title={title} description={description} client:only />
+								</span>
 								{
 									btns.map((btn) => 
 										(<Link text={btn.label} href={btn.href} />)
@@ -124,6 +125,41 @@ const auths = authors ? authors : ['Diamant'];
 	@tailwind components;
 	@tailwind utilities;
 
+	#row #button {
+    color: var(--color);
+    transition: all 0.2s ease-in-out;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: var(--selection-btn);
+    cursor: pointer;
+  }
+
+  #row > #button:first-child {
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    margin-left: 0rem;
+  }
+
+	#row > #button:last-child {
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin-right: 0rem;
+  }
+
+  #row #button:hover {
+    color: white;
+    border-color: var(--color);
+  }
+  #row #button:focus,
+  #row #button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
 	::-webkit-scrollbar {
 		width: 0.4rem;
 	}
@@ -142,27 +178,5 @@ const auths = authors ? authors : ['Diamant'];
 	::-webkit-scrollbar-thumb:hover {
 		background: var(--secondary);
 	}
-
-	#button {
-    color: var(--color);
-    transition: all 0.2s ease-in-out;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: var(--selection-btn);
-    cursor: pointer;
-  }
-
-  #button:hover {
-    color: white;
-    border-color: var(--color);
-  }
-  #button:focus,
-  #button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
 }
 </style>
