@@ -48,7 +48,7 @@ const auths = authors ? authors : ['Diamant'];
 								<h3 class="ml-1 w-fit flex justify-center items-center pl-2 border-l-4 border-solid text-xl font-bold text-[--primary]"
 								style="border-color: var(--secondary);" >{type}.</h3>
 							</hgroup>
-							<div id="row" class="mb-8 flex flex-row items-center justify-start lg:justify-start flex-wrap">
+							<div id="row" class="mb-8 flex flex-col lg:flex-row items-stretch lg:items-center justify-start lg:justify-start flex-wrap">
 								<Link text={`< ${lang == "en" ? 'My writings' : "Mes écrits"}`} href={`/${lang}/${lang == "en" ? 'writes' : "ecrits"}/`} />
 								<span id="button">
 									<ShareBtn text={`${lang == "en" ? 'Share' : "Partager"}`} copyText={`${lang == "en" ? 'Copy URL' : "Copier l'URL"}`} 
@@ -79,6 +79,7 @@ const auths = authors ? authors : ['Diamant'];
 	{ pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
 </html>
 
+}
 <style is:global>
 	:root {
 		--primary: #b69bc9;
@@ -178,5 +179,30 @@ const auths = authors ? authors : ['Diamant'];
 	::-webkit-scrollbar-thumb:hover {
 		background: var(--secondary);
 	}
+	@media (max-width: 1024px) {
+		#row #button {
+			text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+		margin-top: 0.05rem;
+		margin-bottom: 0.05rem;
+    font-size: 0.8em;
+  }
+	#row > #button:first-child {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+    margin-top: 0rem;
+  }
+
+	#row > #button:last-child {
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+    margin-bottom: 0rem;
+  }
+}
 }
 </style>

@@ -145,4 +145,30 @@ const {frontmatter, title, description, image, desc} = Astro.props;
   #row #button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
+
+	@media (max-width: 1024px) {
+		#row #button {
+			text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+		margin-top: 0.05rem;
+		margin-bottom: 0.05rem;
+    font-size: 0.8em;
+  }
+	#row > #button:first-child {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+    margin-top: 0rem;
+  }
+
+	#row > #button:last-child {
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+    margin-bottom: 0rem;
+  }
+	}
 </style>
