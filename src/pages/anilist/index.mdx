@@ -1,0 +1,52 @@
+---
+layout: '../../layouts/Layout.astro'
+title: 'About @aDiamant'
+description: 'My webpage for some infos about me based on my Anilist profile.'
+bgSrc: '/assets/anilistbg.png'
+bgSrcD: 'Pocket monster (2023) - Episode 50.'
+---
+
+
+import Title from '../../components/Title.svelte';
+import Links from '../../components/Links.svelte';
+import Link from '../../components/Link.svelte';
+
+<Title
+    title="Hi weebs, I'm Diamant. 👋"
+    subtitle='@aDiamant'
+    imageAlt='logo'
+    image='/logos/44.png'
+/>
+
+- 💜 Part of __[Dot-Shi](https://anilist.co/character/304179/Dot)__ fanclub.
+
+<br/>
+
+- ✨ Reviver of dead Anilist's forum games.
+- 💕 Romance, Comedy, Yuri, Isekai fan.
+- 🐲 Watched __[Miss Kobayashi's dragon maid](https://anilist.co/anime/21776/Miss-Kobayashis-Dragon-Maid/)__ 5 times!
+
+<br/>
+
+- 🏳️‍⚧️ She/her.
+- 😭 Huge emotional.
+
+<br/>
+
+<Links>
+    <Link color='#6fbbd9' text='My anilist page' href='https://anilist.co/user/aDiamant/' newTab={true}/>
+    <Link
+        color='#b69bc9'
+        text='My main website'
+        href='../'
+        newTab={true}
+    />
+</Links>
+
+<Links sub>
+    <Link color='#d4d4d4' first text='All of my 10s' href='https://anilist.co/forum/thread/16690/comment/2626561'
+          newTab={true}/>
+    <Link color='#d4d4d469' first text='My reviews (Soon)' href='#'/>
+    <Link color='#d4d4d469' first text='My forum games answers (Soon)' href='#'/>
+    <Link color='#d4d4d469' first text='Galery (Soon)' href='#'/>
+</Links>
